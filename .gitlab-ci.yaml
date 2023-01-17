@@ -1,0 +1,12 @@
+scriptjob:
+  stage: script
+  image: 
+    name: "mcr.microsoft.com/powershell:latest"
+  script:
+    - pwsh ./myscript.ps1
+  artifacts:
+  paths:
+    - public
+  only:
+    - master
+
